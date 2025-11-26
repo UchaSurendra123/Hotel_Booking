@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
+ 
+// ✅ Toast
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+ 
 // 🌐 Public Components
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -19,29 +23,29 @@ import HotelRegistrationForm from "./components/HotelRegistrationForm";
 import PaymentStepper from "./components/PaymentStepper";
 import PaymentContent from "./components/PaymentContent";
 import BookingConfirmation from "./components/BookingConfirmation";
-
+ 
 // 🧭 Admin Components
 import Sidebar from "./components/Sidebar";
 import Headers from "./components/Headers";
 import Dashboard from "./pages/Dashboard";
 import AdminLogin from "./pages/AdminLogin";
-
+ 
 // 🆕 Admin Sub Pages
 import Refund from "./pages/Refund";
 import Message from "./pages/Message";
 import Help from "./pages/Help";
 import Setting from "./pages/Setting";
 import UserBookings from "./pages/UserBookings";
-
+ 
 // 🆕 User / Owner Pages
 import UserDashboard from "./pages/UserDashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
-
+ 
 // 🆕 Password Pages
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPasswordAdmin from "./pages/ResetPasswordAdmin";
-
+ 
 // 🧱 Layouts
 const DashboardLayoutNew = ({ children, onLogout }) => (
   <div className="flex min-h-screen bg-gray-100">
@@ -52,38 +56,40 @@ const DashboardLayoutNew = ({ children, onLogout }) => (
     </div>
   </div>
 );
-
+ 
 const PublicLayout = ({ children }) => (
   <div className="min-h-screen bg-white font-poppins flex flex-col">
     <Header />
-    <div className="pt-20"> {/* 👈 Adds space below fixed header */}</div>
+    <div className="pt-20">{/* 👈 Adds space below fixed header */}</div>
     <main className="flex-grow">{children}</main>
     <Footer />
   </div>
 );
-
+ 
 function App() {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
-
-  // ✅ Restore admin login from localStorage
+ 
   useEffect(() => {
     const loggedIn = localStorage.getItem("isAdminAuthenticated") === "true";
     setIsAdminAuthenticated(loggedIn);
   }, []);
-
-  // ✅ Handle admin login/logout
+ 
   const handleAdminLogin = () => {
     setIsAdminAuthenticated(true);
     localStorage.setItem("isAdminAuthenticated", "true");
   };
-
+ 
   const handleAdminLogout = () => {
     setIsAdminAuthenticated(false);
     localStorage.removeItem("isAdminAuthenticated");
   };
-
+ 
   return (
     <Router>
+ 
+      {/* 🚀 Toast Added */}
+      <ToastContainer position="top-right" autoClose={2000} />
+ 
       <Routes>
         {/* 🌐 Public Pages */}
         <Route
@@ -91,7 +97,7 @@ function App() {
           element={
             <PublicLayout>
               <Hero />
-              <DemoHotels/>
+              <DemoHotels />
             </PublicLayout>
           }
         />
@@ -140,11 +146,11 @@ function App() {
             </PublicLayout>
           }
         />
-
+ 
         {/* 🧭 User Dashboard Pages */}
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/owner-dashboard" element={<OwnerDashboard />} />
-
+ 
         {/* 🔑 Auth Pages */}
         <Route
           path="/login"
@@ -202,9 +208,8 @@ function App() {
             </PublicLayout>
           }
         />
-  
-
-          {/* 🆕 Password Pages */}
+ 
+        {/* 🆕 Password Pages */}
         <Route
           path="/forgot-password"
           element={
@@ -221,7 +226,7 @@ function App() {
             </PublicLayout>
           }
         />
-
+ 
         {/* 🆕 Admin Password Pages */}
         <Route
           path="/admin-forgot-password"
@@ -239,7 +244,7 @@ function App() {
             </PublicLayout>
           }
         />
-
+ 
         {/* 🔐 Admin Login */}
         <Route
           path="/admin-login"
@@ -251,7 +256,7 @@ function App() {
             )
           }
         />
-
+ 
         {/* 🧭 Protected Admin Dashboard */}
         <Route
           path="/admin-dashboard"
@@ -265,7 +270,7 @@ function App() {
             )
           }
         />
-
+ 
         {/* 🧾 Admin Sub Pages */}
         <Route
           path="/admin-dashboard/bookings"
@@ -331,6 +336,5 @@ function App() {
     </Router>
   );
 }
-
+ 
 export default App;
-
