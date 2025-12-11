@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../models/UserModel.js"; // adjust path if needed
+import User from "../models/UserModel.js"; 
 
 export const protect = async (req, res, next) => {
   try {
@@ -13,16 +13,16 @@ export const protect = async (req, res, next) => {
     if (!token)
       return res.status(401).json({ error: "You must be logged in to save a booking." });
 
-    // Decode token
+    
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "secret");
 
-    // Fetch full user from DB
+    
     const user = await User.findById(decoded.id).select("-password");
 
     if (!user)
       return res.status(401).json({ error: "User not found" });
 
-    req.user = user;  // NOW user has name, email, phone
+    req.user = user;  
 
     next();
   } catch (err) {

@@ -3,12 +3,12 @@ import React from "react";
 const Message = () => {
   return (
     <div className="p-6">
-      {/* Page Title */}
+      
       <h1 className="text-2xl font-bold text-primary mb-8">
         Messages from Deccan Stay
       </h1>
 
-      {/* Message Info Card */}
+   
       <div className="bg-white shadow-md rounded-2xl border border-gray-200 max-w-3xl p-6">
         <h2 className="text-xl font-semibold text-blue-600 mb-3">
           🏨 Latest Hotel Offers & Updates
@@ -19,7 +19,7 @@ const Message = () => {
           Here are the latest updates and offers from <strong>Deccan Stay</strong> to help boost your bookings and maximize room occupancy.
         </p>
 
-        {/* Example messages */}
+       
         <div className="space-y-4 text-gray-700">
           <div className="border-l-4 border-green-500 pl-4">
             <h3 className="font-semibold text-lg text-gray-800">💸 Winter Special Discount</h3>
@@ -64,7 +64,7 @@ const Message = () => {
           </div>
         </div>
 
-        {/* Footer message */}
+       
         <div className="mt-8 border-t pt-4 text-sm text-gray-500">
           Message from <span className="text-blue-600 font-semibold">Deccan Stay</span>:  
           <br />

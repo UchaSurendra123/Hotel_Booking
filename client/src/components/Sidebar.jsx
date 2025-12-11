@@ -10,7 +10,7 @@ const Sidebar = ({ onLogout }) => {
     navigate("/admin-login");
   };
 
-  // 🧭 Main menu items
+  
   const menuItems = [
     {
       icon: "https://static.codia.ai/image/2025-10-28/XHmSQYpDLw.png",
@@ -29,7 +29,6 @@ const Sidebar = ({ onLogout }) => {
     },
   ];
 
-  // ⚙️ Secondary items
   const secondaryItems = [
     {
       icon: "https://static.codia.ai/image/2025-10-28/6Kr3KsHWXm.png",
@@ -58,7 +57,7 @@ const Sidebar = ({ onLogout }) => {
 
       <nav className="flex-1 px-8">
         <div className="space-y-8">
-          {/* Main Menu */}
+          
           {menuItems.map((item, index) => (
             <div
               key={index}
@@ -70,7 +69,7 @@ const Sidebar = ({ onLogout }) => {
             </div>
           ))}
 
-          {/* Secondary Menu */}
+         
           <div className="space-y-8 pt-16">
             {secondaryItems.map((item, index) => (
               <div
@@ -83,7 +82,7 @@ const Sidebar = ({ onLogout }) => {
               </div>
             ))}
 
-            {/* 🚪 Logout */}
+           
             <div
               onClick={handleLogout}
               className="flex items-center space-x-4 cursor-pointer text-red-500 font-semibold hover:text-red-600"

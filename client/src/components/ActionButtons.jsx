@@ -2,12 +2,12 @@ import React from 'react'
 
 const ActionButtons = () => {
   const handlePayNow = () => {
-    // Handle payment logic here
+    
     console.log('Processing payment...')
   }
 
   const handleCancel = () => {
-    // Handle cancel logic here
+   
     console.log('Payment cancelled')
   }
 

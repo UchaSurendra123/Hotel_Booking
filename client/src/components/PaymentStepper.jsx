@@ -4,7 +4,7 @@ const PaymentStepper = () => {
   return (
     <div className="flex items-center justify-center mt-12 mb-16">
       <div className="flex items-center space-x-8">
-        {/* Step 1 - Completed (Green Background, White Tick) */}
+       
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 bg-[#1ABC9C] rounded-full flex items-center justify-center shadow-md">
             <svg
@@ -20,10 +20,10 @@ const PaymentStepper = () => {
           </div>
         </div>
 
-        {/* Connector line */}
+       
         <div className="w-28 h-px bg-gray-300"></div>
 
-        {/* Step 2 - Completed (Green Background, White Tick) */}
+       
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 bg-[#1ABC9C] rounded-full flex items-center justify-center shadow-md">
             <svg
@@ -39,10 +39,10 @@ const PaymentStepper = () => {
           </div>
         </div>
 
-        {/* Connector line */}
+       
         <div className="w-28 h-px bg-gray-300"></div>
 
-        {/* Step 3 - Current (Gray Background, Number 3) */}
+       
         <div className="flex flex-col items-center">
           <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center shadow-sm">
             <span className="text-2xl font-semibold text-gray-700">3</span>

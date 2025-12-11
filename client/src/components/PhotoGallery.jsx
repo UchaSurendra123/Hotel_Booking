@@ -9,7 +9,7 @@ const PhotoGallery = ({ images = [] }) => {
           src={img}
           alt={`Gallery ${index + 1}`}
           className="w-full h-60 md:h-80 object-cover rounded-2xl shadow"
-          onError={(e) => (e.target.style.display = "none")} // hides broken images
+          onError={(e) => (e.target.style.display = "none")} 
         />
       ))}
     </section>

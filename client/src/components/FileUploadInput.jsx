@@ -38,7 +38,6 @@ const FileUploadInput = ({ label, placeholder, onChange, multiple = true }) => {
         </label>
       </div>
 
-      {/* Preview Section */}
       <div className="mt-3 space-y-2">
         {files.length > 0 &&
           files.map((file, index) => (

@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
-      {/* 🏢 About Section */}
+      
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-primary mb-4">About Deccan Stay</h1>
         <p className="text-gray-700 max-w-3xl mx-auto">
@@ -14,7 +14,7 @@ const About = () => {
         </p>
       </div>
 
-      {/* 💡 Mission & Vision */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
         <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Our Mission</h2>
@@ -36,7 +36,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* 👨‍💼 Management Team */}
+     
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-primary mb-6">Our Management Team</h2>
         <p className="text-gray-700 max-w-3xl mx-auto mb-10">
@@ -45,14 +45,14 @@ const About = () => {
           Together, they have built a brand that blends technology with hospitality.
         </p>
 
-        {/* Team Details (No Images) */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           <div className="bg-gray-50 p-6 rounded-2xl shadow-md">
-            <h3 className="text-lg font-semibold text-secondary">Kavya Sri</h3>
+            <h3 className="text-lg font-semibold text-secondary">Kavya Sree</h3>
             <p className="text-gray-600 text-sm">Managing Partner</p>
             <p className="text-gray-700 mt-2 text-sm">
-              Oversees strategic planning and corporate partnerships, ensuring
-              smooth coordination across all Deccan Stay operations.
+              Leads strategic planning initiatives and strengthens corporate partnerships, 
+              driving smooth coordination across all Deccan Stay operations.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* 🚀 Business Philosophy */}
+      
       <div className="text-center mt-16">
         <h2 className="text-3xl font-bold text-primary mb-4">
           Innovation Meets Hospitality

@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import User from "../models/UserModel.js";
 import sendEmail from "../utils/sendEmail.js";
 
-// 🔹 Forgot Password → send token
+
 export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
@@ -11,17 +11,17 @@ export const forgotPassword = async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ message: "User not found." });
 
-    // Generate raw token
+    
     const resetToken = crypto.randomBytes(32).toString("hex");
 
-    // Save hashed token & expiry
+    
     user.resetPasswordToken = crypto.createHash("sha256").update(resetToken).digest("hex");
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 mins
 
-    // ⚡ Skip validation for password field
+    
     await user.save({ validateBeforeSave: false });
 
-    // Send token via email
+    
     const message = `
       <h2>Password Reset</h2>
       <p>Use this token to reset your password:</p>
@@ -37,7 +37,7 @@ export const forgotPassword = async (req, res) => {
   }
 };
 
-// 🔹 Reset Password → verify token & update password
+
 export const resetPassword = async (req, res) => {
   try {
     const { token, password } = req.body;
@@ -46,7 +46,7 @@ export const resetPassword = async (req, res) => {
       return res.status(400).json({ message: "Token and password are required." });
     }
 
-    // Hash token to match DB
+    
     const resetPasswordToken = crypto.createHash("sha256").update(token).digest("hex");
 
     const user = await User.findOne({
@@ -56,7 +56,7 @@ export const resetPassword = async (req, res) => {
 
     if (!user) return res.status(400).json({ message: "Invalid or expired reset token." });
 
-    // Hash new password & save
+    
     user.password = await bcrypt.hash(password, 10);
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;

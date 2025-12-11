@@ -23,7 +23,7 @@ const ResetPasswordAdmin = () => {
     }
 
     try {
-      // Example API call to reset password
+      
       await axios.post("http://localhost:5000/api/admin/reset-password", {
         username,
         newPassword,

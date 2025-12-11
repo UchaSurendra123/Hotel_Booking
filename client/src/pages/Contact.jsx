@@ -11,7 +11,7 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Placeholder: wire this to your API / email service.
+    
     setStatus({ type: "loading", text: "Sending..." });
     setTimeout(() => {
       setStatus({ type: "success", text: "Message sent. We'll get back to you within 24 hours." });
@@ -67,7 +67,7 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Contact card + form column */}
+        
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-6">
             <h2 className="text-2xl font-semibold mb-4">Get in touch</h2>
@@ -96,7 +96,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form */}
+        
           <form onSubmit={handleSubmit} className="bg-white border border-gray-100 shadow-sm rounded-2xl p-6">
             <h2 className="text-2xl font-semibold mb-4">Send us a message</h2>
 
@@ -176,7 +176,7 @@ export default function Contact() {
           </form>
         </div>
 
-        {/* Offices list column */}
+       
         <aside className="space-y-4">
           <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-5">
             <h2 className="text-xl font-semibold mb-3">Our Hyderabad offices</h2>
@@ -212,7 +212,7 @@ export default function Contact() {
             </ul>
           </div>
 
-          {/* Quick contact card */}
+        
           <div className="bg-primary/5 border border-primary/10 rounded-2xl p-5">
             <h3 className="font-semibold mb-2">Quick help</h3>
             <p className="text-sm text-gray-700">For urgent bookings call our 24/7 hotline:</p>

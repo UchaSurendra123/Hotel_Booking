@@ -4,7 +4,7 @@ const Headersss = () => {
   return (
     <header className="bg-gray-bg px-6 py-8">
       <div className="flex justify-between items-start">
-        {/* Left Side - Greeting */}
+        
         <div>
           <h2 className="text-xl font-semibold text-black tracking-wide mb-2">
             Hello, Hotel Owner
@@ -14,9 +14,9 @@ const Headersss = () => {
           </p>
         </div>
 
-        {/* Right Side - Profile & Notifications */}
+        
         <div className="flex items-center space-x-6">
-          {/* Notification Icon */}
+         
           <img 
             src="https://static.codia.ai/image/2025-10-29/QGds66jYiY.png" 
             alt="Notifications" 
@@ -25,7 +25,7 @@ const Headersss = () => {
           
           <div className="w-px h-12 bg-gray-300"></div>
           
-          {/* Profile Section */}
+        
           <div className="flex items-center space-x-4 cursor-pointer">
             <img 
               src="https://static.codia.ai/image/2025-10-29/sGbRkc9TJP.png" 

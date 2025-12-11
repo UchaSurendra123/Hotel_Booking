@@ -6,7 +6,7 @@ const SearchBars = ({ onSearch, onSort }) => {
   const handleSearch = (e) => {
     const value = e.target.value;
     setQuery(value);
-    onSearch(value); // ✅ call prop
+    onSearch(value); 
   };
 
   const handleSort = (e) => {
@@ -15,7 +15,7 @@ const SearchBars = ({ onSearch, onSort }) => {
 
   return (
     <div className="flex items-center justify-between mb-6">
-      {/* Search Input */}
+      
       <div className="flex items-center bg-white rounded-2xl px-5 py-3 flex-1 max-w-4xl">
         <img
           src="https://static.codia.ai/image/2025-10-28/bms7dwkkhZ.png"
@@ -31,7 +31,7 @@ const SearchBars = ({ onSearch, onSort }) => {
         />
       </div>
 
-      {/* Sort Dropdown */}
+     
       <div className="flex items-center gap-4 ml-8">
         <span className="font-semibold text-gray-600">Sort by</span>
         <select

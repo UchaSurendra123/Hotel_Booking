@@ -1,14 +1,14 @@
 import React, { createContext, useState, useEffect } from "react";
 
-// 1. Create context
+
 export const AuthContext = createContext();
 
-// 2. Create provider
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);      // Stores user info
-  const [token, setToken] = useState(null);    // Stores JWT token
 
-  // Load user + token from localStorage on mount
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);      
+  const [token, setToken] = useState(null);   
+
+ 
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
     const savedToken = localStorage.getItem("token");
@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
     if (savedToken) setToken(savedToken);
   }, []);
 
-  // Login function
+ 
   const login = ({ userData, userToken }) => {
     setUser(userData);
     setToken(token);
@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("token", token);
   };
 
-  // Logout function
+  
   const logout = () => {
     setUser(null);
     setToken(null);

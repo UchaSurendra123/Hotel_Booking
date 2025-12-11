@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Sidebarss = ({ activeTab, setActiveTab }) => {
-  const navigate = useNavigate(); // ✅ useNavigate hook
+  const navigate = useNavigate(); 
 
   const menuItems = [
     { icon: 'https://static.codia.ai/image/2025-10-29/GODdQftYT8.png', label: 'Dashboard', key: 'dashboard' },
@@ -22,12 +22,12 @@ const Sidebarss = ({ activeTab, setActiveTab }) => {
   };
 
   const handleBack = () => {
-    navigate("/verification-success"); // ✅ direct navigation
+    navigate("/verification-success");
   };
 
   return (
     <aside className="w-64 bg-white h-screen flex flex-col justify-between">
-      {/* Top menu */}
+      
       <div>
         <div className="p-8 pb-14">
           <h1 className="font-poppins text-4xl font-medium text-dark">
@@ -68,7 +68,7 @@ const Sidebarss = ({ activeTab, setActiveTab }) => {
         </nav>
       </div>
 
-      {/* Back button */}
+      
       <div className="p-6">
         <button
           onClick={handleBack}

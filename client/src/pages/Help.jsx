@@ -3,12 +3,11 @@ import React from "react";
 const Help = () => {
   return (
     <div className="p-6">
-      {/* Page Header */}
+     
       <h1 className="text-2xl font-bold text-primary mb-8">
         Help & Support
       </h1>
 
-      {/* Deccan Stay Support Card */}
       <div className="bg-white shadow-md rounded-2xl border border-gray-200 max-w-2xl p-6">
         <h2 className="text-xl font-semibold text-blue-600 mb-3">
           💬 Deccan Stay Support

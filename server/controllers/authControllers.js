@@ -7,7 +7,7 @@ import sendEmail from "../utils/sendEmail.js";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-// 🔹 REGISTER
+
 export const registerUser = async (req, res) => {
   try {
     const { name, email, phone, country, username, password } = req.body;
@@ -37,7 +37,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// 🔹 LOGIN (Username + Password)
+
 export const loginUser = async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -65,7 +65,7 @@ export const loginUser = async (req, res) => {
   }
 };
 
-// 🔹 GOOGLE LOGIN
+
 export const googleLogin = async (req, res) => {
   try {
     const { token } = req.body;
@@ -109,7 +109,7 @@ export const googleLogin = async (req, res) => {
   }
 };
 
-// 🔹 FORGOT PASSWORD
+
 export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
@@ -139,7 +139,7 @@ export const forgotPassword = async (req, res) => {
   }
 };
 
-// 🔹 RESET PASSWORD
+
 export const resetPassword = async (req, res) => {
   try {
     const resetPasswordToken = crypto

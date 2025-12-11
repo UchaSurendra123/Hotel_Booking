@@ -3,12 +3,12 @@ import React from "react";
 const Refund = () => {
   return (
     <div className="p-6">
-      {/* Page Title */}
+      
       <h1 className="text-2xl font-bold text-primary mb-8">
         Refund
       </h1>
 
-      {/* Refund Info Card */}
+    
       <div className="bg-white shadow-md rounded-2xl border border-gray-200 max-w-2xl p-6">
         <h2 className="text-xl font-semibold text-blue-600 mb-3">
           💰 Deccan Stay Refund Policy

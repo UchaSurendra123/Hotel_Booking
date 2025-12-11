@@ -11,7 +11,7 @@ const FilterControl = () => {
 
   return (
     <div className="flex items-center justify-between mb-8">
-      {/* Left Side - View Options */}
+      
       <div className="flex space-x-4">
         {viewOptions.map((option, index) => (
           <button
@@ -29,7 +29,7 @@ const FilterControl = () => {
         ))}
       </div>
 
-      {/* Right Side - Filters and Add Button */}
+      
       <div className="flex space-x-4">
         <div className="flex items-center bg-white border border-gray-300 rounded-lg px-5 py-3">
           <span className="text-gray-dark tracking-wide mr-4">This Month</span>

@@ -15,8 +15,8 @@ const PasswordField = ({ label, placeholder, value, onChange }) => {
         <input
           type={showPassword ? 'text' : 'password'}
           placeholder={placeholder}
-          value={value || ''} // ✅ ensures it's always a string
-          onChange={(e) => onChange && onChange(e.target.value)} // ✅ pass only string value
+          value={value || ''} 
+          onChange={(e) => onChange && onChange(e.target.value)} 
           className="w-full h-[70px] px-6 pr-16 text-[22px] leading-8 text-text-gray placeholder-text-gray bg-white border-2 border-border-gray rounded-[10px] focus:outline-none focus:border-primary-blue transition-colors"
         />
         <button

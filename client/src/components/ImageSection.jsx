@@ -10,7 +10,7 @@ const ImageSection = () => {
       />
       
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="bg-white bg-opacity-70 border border-gray-300 rounded-[30px] w-[662px] h-[606px] flex items-center justify-center relative">
+        <div className="bg-white bg-opacity-70 border border-gray-300 rounded-[30px] w-[662px] h-[480px] flex items-center justify-center relative">
            <h1 className="text-[80px] font-medium leading-[120px] text-center">
             <span style={{ color: '#3256EB' }}>Deccan</span>
             <span className="text-dark-blue">Stay</span>

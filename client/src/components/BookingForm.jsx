@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const BookingForm = ({ hotel }) => {
   const [days, setDays] = useState(1);
-  const [checkIn, setCheckIn] = useState(""); // 🗓️ check-in date
+  const [checkIn, setCheckIn] = useState(""); 
   const navigate = useNavigate();
 
   if (!hotel) return null;
@@ -12,10 +12,10 @@ const BookingForm = ({ hotel }) => {
   const handleDecrement = () => days > 1 && setDays((prev) => prev - 1);
   const handleCancel = () => navigate("/");
 
-  // 💰 Calculate total in INR
+ 
   const totalPrice = hotel.price * days;
 
-  // 📅 Calculate check-out date
+  
   const getCheckoutDate = () => {
     if (!checkIn) return "";
     const checkInDate = new Date(checkIn);
@@ -23,7 +23,7 @@ const BookingForm = ({ hotel }) => {
     return checkInDate.toISOString().split("T")[0];
   };
 
-  // 🚀 Navigate to Payment Page with data
+  
   const handleBookNow = () => {
     if (!checkIn) {
       alert("Please select a check-in date before booking.");
@@ -43,12 +43,12 @@ const BookingForm = ({ hotel }) => {
 
   return (
     <div className="w-full max-w-md space-y-6 border border-gray-300 rounded-2xl p-6 shadow-md bg-white">
-      {/* Hotel Name */}
+     
       <h2 className="text-2xl font-semibold text-primary-blue text-center">
         {hotel.name}
       </h2>
 
-      {/* Duration Selector */}
+   
       <div className="space-y-3">
         <label className="block text-base text-primary-blue font-medium">
           How long will you stay?
@@ -72,7 +72,7 @@ const BookingForm = ({ hotel }) => {
         </div>
       </div>
 
-      {/* 📅 Date Pickers */}
+     
       <div className="space-y-4">
         <div>
           <label className="block text-base text-primary-blue font-medium mb-2">
@@ -99,7 +99,7 @@ const BookingForm = ({ hotel }) => {
         </div>
       </div>
 
-      {/* 💸 Price Info */}
+      
       <div className="py-4 text-gray-700">
         <p className="font-light text-base leading-relaxed">
           You will pay{" "}
@@ -114,7 +114,7 @@ const BookingForm = ({ hotel }) => {
         </p>
       </div>
 
-      {/* 🧭 Buttons */}
+      
       <div className="space-y-4 pt-4">
         <button
           onClick={handleBookNow}

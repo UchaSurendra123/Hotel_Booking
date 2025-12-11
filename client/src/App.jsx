@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
- 
-// ✅ Toast
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
- 
-// 🌐 Public Components
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import DemoHotels from "./components/DemoHotels";
@@ -23,31 +19,21 @@ import HotelRegistrationForm from "./components/HotelRegistrationForm";
 import PaymentStepper from "./components/PaymentStepper";
 import PaymentContent from "./components/PaymentContent";
 import BookingConfirmation from "./components/BookingConfirmation";
- 
-// 🧭 Admin Components
 import Sidebar from "./components/Sidebar";
 import Headers from "./components/Headers";
 import Dashboard from "./pages/Dashboard";
 import AdminLogin from "./pages/AdminLogin";
- 
-// 🆕 Admin Sub Pages
 import Refund from "./pages/Refund";
 import Message from "./pages/Message";
 import Help from "./pages/Help";
 import Setting from "./pages/Setting";
 import UserBookings from "./pages/UserBookings";
- 
-// 🆕 User / Owner Pages
 import UserDashboard from "./pages/UserDashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
- 
-// 🆕 Password Pages
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPasswordAdmin from "./pages/ResetPasswordAdmin";
- 
-// 🧱 Layouts
-const DashboardLayoutNew = ({ children, onLogout }) => (
+ const DashboardLayoutNew = ({ children, onLogout }) => (
   <div className="flex min-h-screen bg-gray-100">
     <Sidebar onLogout={onLogout} />
     <div className="flex-1 flex flex-col">
@@ -60,7 +46,7 @@ const DashboardLayoutNew = ({ children, onLogout }) => (
 const PublicLayout = ({ children }) => (
   <div className="min-h-screen bg-white font-poppins flex flex-col">
     <Header />
-    <div className="pt-20">{/* 👈 Adds space below fixed header */}</div>
+    <div className="pt-20"></div>
     <main className="flex-grow">{children}</main>
     <Footer />
   </div>
@@ -87,11 +73,11 @@ function App() {
   return (
     <Router>
  
-      {/* 🚀 Toast Added */}
+      
       <ToastContainer position="top-right" autoClose={2000} />
  
       <Routes>
-        {/* 🌐 Public Pages */}
+        
         <Route
           path="/"
           element={
@@ -147,11 +133,11 @@ function App() {
           }
         />
  
-        {/* 🧭 User Dashboard Pages */}
+        
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/owner-dashboard" element={<OwnerDashboard />} />
  
-        {/* 🔑 Auth Pages */}
+       
         <Route
           path="/login"
           element={
@@ -209,7 +195,7 @@ function App() {
           }
         />
  
-        {/* 🆕 Password Pages */}
+       
         <Route
           path="/forgot-password"
           element={
@@ -227,7 +213,7 @@ function App() {
           }
         />
  
-        {/* 🆕 Admin Password Pages */}
+       
         <Route
           path="/admin-forgot-password"
           element={
@@ -245,7 +231,7 @@ function App() {
           }
         />
  
-        {/* 🔐 Admin Login */}
+        
         <Route
           path="/admin-login"
           element={
@@ -257,7 +243,7 @@ function App() {
           }
         />
  
-        {/* 🧭 Protected Admin Dashboard */}
+       
         <Route
           path="/admin-dashboard"
           element={
@@ -271,7 +257,7 @@ function App() {
           }
         />
  
-        {/* 🧾 Admin Sub Pages */}
+       
         <Route
           path="/admin-dashboard/bookings"
           element={

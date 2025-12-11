@@ -54,7 +54,7 @@ const RoomsList = ({ rooms, setRooms }) => {
                 </h4>
 
                 <div className="flex space-x-2">
-                  {/* Edit Button */}
+                 
                   <button
                     className="w-9 h-9 border border-blue-400 text-blue-600 rounded flex items-center justify-center"
                     onClick={() => handleEdit(index)}
@@ -66,7 +66,7 @@ const RoomsList = ({ rooms, setRooms }) => {
                     />
                   </button>
 
-                  {/* Delete Button */}
+                  
                   <button
                     className="w-9 h-9 border border-blue-400 text-red-600 rounded flex items-center justify-center"
                     onClick={() =>
@@ -86,7 +86,7 @@ const RoomsList = ({ rooms, setRooms }) => {
                 {room.date} - {room.description}
               </p>
 
-              {/* Inline Edit Form */}
+             
               {editRoomId === index && (
                 <div className="bg-blue-50 border border-blue-300 p-2 rounded text-blue-700 text-sm space-y-2">
                   <input
@@ -127,7 +127,7 @@ const RoomsList = ({ rooms, setRooms }) => {
                 </div>
               )}
 
-              {/* Inline Delete Confirmation */}
+              
               {deleteRoomId === index && (
                 <div className="bg-red-50 border border-red-300 p-2 rounded text-red-700 text-sm flex justify-between items-center mt-2">
                   <span>Are you sure you want to delete?</span>

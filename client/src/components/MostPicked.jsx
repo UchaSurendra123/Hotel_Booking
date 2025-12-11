@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Hotel data
+
 const hotels = [
   {
     id: 1,
@@ -48,12 +48,12 @@ const MostPicked = () => {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Featured hotel */}
+        
         {hotels.slice(0, 1).map((hotel) => (
           <Link
             key={hotel.id}
             to={`/hotel/${hotel.id}`}
-            state={{ hotel }} // ✅ pass hotel data to booking page
+            state={{ hotel }} 
             className="lg:col-span-1 lg:row-span-2 relative rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform"
           >
             <img
@@ -72,7 +72,7 @@ const MostPicked = () => {
           </Link>
         ))}
 
-        {/* Smaller hotels */}
+        
         {hotels.slice(1).map((hotel) => (
           <Link
             key={hotel.id}

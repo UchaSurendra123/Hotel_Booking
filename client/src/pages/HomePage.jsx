@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import BookingForm from "../components/BookingForm";
-import DemoHotels from "../components/DemoHotels"; // ✅ import
+import DemoHotels from "../components/DemoHotels"; 
 
 function HomePage() {
   return (

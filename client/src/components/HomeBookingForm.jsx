@@ -24,7 +24,7 @@ const HomeBookingForm = () => {
       <div className="bg-lightBlue rounded-full p-8">
         <div className="flex flex-wrap items-center justify-center gap-4">
 
-          {/* ✅ Check-In & Check-Out Box */}
+         
           <div className="bg-white rounded-xl p-4 shadow-lg flex items-center space-x-4 min-w-0 flex-1 max-w-xs">
             <img
               src="https://static.codia.ai/image/2025-10-23/FcvwZJ2PRA.png"
@@ -53,7 +53,7 @@ const HomeBookingForm = () => {
             </div>
           </div>
 
-          {/* ✅ Persons Dropdown (1–5) */}
+          
           <div className="bg-white rounded-xl p-4 shadow-lg flex items-center space-x-4 min-w-0 flex-1 max-w-xs">
             <img
               src="https://static.codia.ai/image/2025-10-23/OKFUrF8pcF.png"
@@ -76,7 +76,7 @@ const HomeBookingForm = () => {
             
           </div>
 
-          {/* ✅ Location Box */}
+          
           <div className="bg-white rounded-xl p-4 shadow-lg flex items-center space-x-4 min-w-0 flex-1 max-w-xs">
             <img
               src="https://static.codia.ai/image/2025-10-23/7KgrZJG86c.png"
@@ -92,7 +92,7 @@ const HomeBookingForm = () => {
             />
           </div>
 
-          {/* ✅ Search Button */}
+         
           <button
             onClick={handleSearch}
             className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium shadow-lg transition-colors"

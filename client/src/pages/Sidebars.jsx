@@ -33,12 +33,12 @@ const Sidebars = ({ activePage, setActivePage }) => {
 
   return (
     <aside className="w-64 bg-white shadow-md flex flex-col py-6">
-      {/* ✅ Logo / Title */}
+      
       <h2 className="text-2xl font-semibold text-primary text-center mb-8">
         Deccan<span className="text-secondary">Stay</span>
       </h2>
 
-      {/* ✅ Sidebar Menu */}
+   
       <nav className="flex-1">
         {menuItems.map((item) => (
           <button
