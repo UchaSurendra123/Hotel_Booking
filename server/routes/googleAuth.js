@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-dotenv.config(); // ✅ Load environment variables first!
+dotenv.config(); 
 
 import passport from "passport";
 import jwt from "jsonwebtoken";
@@ -9,7 +9,6 @@ import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 
 const router = express.Router();
 
-// ✅ Configure Google OAuth Strategy
 passport.use(
   new GoogleStrategy(
     {
@@ -39,7 +38,7 @@ passport.use(
   )
 );
 
-// ✅ Serialize and deserialize user for sessions
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
@@ -53,13 +52,12 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 
-// ✅ Google Auth Routes
+
 router.get(
   "/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
-// ✅ Google Callback
 router.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
@@ -68,7 +66,6 @@ router.get(
       expiresIn: "1d",
     });
 
-    // ✅ Redirect to frontend with JWT token
     res.redirect(`http://localhost:3000?token=${token}`);
   }
 );

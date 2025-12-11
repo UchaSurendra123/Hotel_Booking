@@ -5,7 +5,6 @@ import Booking from "../models/Booking.js";
 const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// CREATE PAYMENT INTENT
 router.post("/create-payment", async (req, res) => {
   try {
     const { amount, bookingData } = req.body;
@@ -35,7 +34,6 @@ router.post("/create-payment", async (req, res) => {
   }
 });
 
-// SAVE BOOKING AFTER SUCCESSFUL PAYMENT
 router.post("/save-booking", async (req, res) => {
   try {
     const booking = new Booking(req.body);
